@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var DoCmd = &cobra.Command{
+var doCmd = &cobra.Command{
 	Use:   "do",
 	Short: "Completes a task from the task list",
 	Run: func(cmd *cobra.Command, args []string) {
@@ -39,10 +39,9 @@ var DoCmd = &cobra.Command{
 				fmt.Printf("Marked \"%d\" as completed.\n", id)
 			}
 		}
-		//fmt.Println(ids)
 	},
 }
 
 func init() {
-	RootCmd.AddCommand(DoCmd)
+	RootCmd.AddCommand(doCmd)
 }
